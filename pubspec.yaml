@@ -36,7 +36,15 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   go_router: ^14.1.0
+  provider: ^6.1.1       # 状态管理
+  shared_preferences: ^2.2.2 # 模拟本地存储
+  equatable: ^2.0.5      # 方便实体类比较
+  
+  fluttertoast: ^8.2.2   # 提示信息
 
+  dio: ^5.0.3           # 网络请求
+  logger: ^1.1.0         # 日志工具
+  flutter_secure_storage: ^8.0.0 # 安全存储
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -89,3 +97,15 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+dependency_overrides:
+  # 示例：指定provider从国内镜像下载
+  provider:
+    hosted:
+      name: provider
+      url: https://pub.flutter-io.cn
+    version: ^6.1.1
+  shared_preferences:
+    hosted:
+      name: shared_preferences
+      url: https://pub.flutter-io.cn
+    version: ^2.2.2
